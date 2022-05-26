@@ -23,6 +23,7 @@ type Event struct {
 
 func main() {
 	handleFunc()
+	//
 }
 
 func handleFunc() {
