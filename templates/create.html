@@ -1,0 +1,16 @@
+{{ define "create" }}
+
+{{ template "header" }}
+<main role="main" class="inner cover">
+    <h1 class="cover-heading">Додати івент</h1>
+    <form action="/save_in_base" method="post">
+        <input type="text" name="event_name" id="event_name" placeholder="Назва івенту"
+        class="form-control"><br>
+        <textarea name="city" id="city" class="form-control" placeholder="Місто"></textarea><br>
+        <textarea name="address" id="address" class="form-control" placeholder="Адреса"></textarea><br>
+        <textarea name="description" id="description" class="form-control" placeholder="Повний опис"></textarea><br>
+        <button class="btn btn-warning">Додати</button>
+    </form>
+</main>
+{{ template "footer" }}
+{{end}}

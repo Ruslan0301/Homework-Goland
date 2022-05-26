@@ -1,0 +1,24 @@
+{{ define "home" }}
+
+{{ template "header" }}
+<main  role="main" class="inner cover">
+    <h1 h1 class="cover-heading">Івенти вашого міста</h1>
+    <form action="/search">
+    <p class="lead">
+        <input type="text" name="select_city" id="select_city" placeholder="введіть назву міста"
+               class="form-control"><br>
+        <button class="btn btn-warning">Пошук</button>
+    </p>
+    </form>
+    {{range .}}
+    <div class="alert alert-danger">
+        <h2>{{ .EventsName }}</h2>
+        <p>{{ .EventsAddress }}</p>
+        <a href="/post/{{ .ID }}" class="btn btn-danger">Докладніше... </a>
+    </div>
+    {{ else }}
+    <p class="lead">Івентів не знайдено!</p>
+    {{ end }}
+</main>
+{{ template "footer" }}
+{{end}}

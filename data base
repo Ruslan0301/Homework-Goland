@@ -1,0 +1,21 @@
+//Create base
+create database "Events_base"
+    with owner postgres;
+
+//Create table
+reate table event
+(
+    events_id          integer default nextval('table_events_events_id_seq'::regclass) not null
+        constraint table_events_pk
+            primary key,
+    events_name        text,
+    events_description text,
+    events_city        text,
+    events_address     text
+);
+
+alter table event
+    owner to postgres;
+
+create unique index table_events_events_id_uindex
+    on event (events_id);

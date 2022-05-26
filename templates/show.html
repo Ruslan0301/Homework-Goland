@@ -1,0 +1,14 @@
+{{ define "show" }}
+
+{{ template "header" }}
+<main  role="main" class="inner cover">
+    <h1 h1 class="cover-heading">{{ .EventsName }}</h1>
+    <p class="lead">{{ .EventsDescription }}</p>
+
+    <p class="lead">
+        <a href="/" class="btn btn-lg btn-secondary">Повернутися на головну сторінку</a>
+    </p>
+
+</main>
+{{ template "footer" }}
+{{end}}
